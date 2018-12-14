@@ -1,0 +1,23 @@
+MTI 2017-18
+============
+
+Ejemplos y ejercicios
+
+Negociación de contenido (curl)
+
+Persona de ejemplo: Mateo Labra Cervelle
+
+URI de wikipedia: 
+URI en bcn: http://datos.bcn.cl/recurso/persona/3229/
+
+
+ 
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix wiki: <http://historiapolitica.bcn.cl/resenas_parlamentarias/wiki/>
+SELECT * WHERE {
+  ?x foaf:isPrimaryTopicOf wiki:Mateo_Labra_Cervelle .
+  ?x ?p ?y .
+}
