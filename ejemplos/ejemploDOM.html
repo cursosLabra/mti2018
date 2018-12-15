@@ -1,0 +1,16 @@
+<html>
+ <head>
+ <title>Prueba</title>
+ <script type="text/javascript">
+  function inserta() {
+    var nuevo = document.createElement("p");
+    var saludo = document.createTextNode("¡Hola!");
+    nuevo.appendChild(saludo);
+    document.body.appendChild(nuevo);
+  }
+ </script>
+ </head>
+ <body>
+  <input type="button" value="Saluda!" onclick="inserta();" /> 
+ </body>
+</html> 
