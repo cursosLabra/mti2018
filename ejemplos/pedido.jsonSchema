@@ -1,0 +1,22 @@
+{"type": "object",
+ "properties": {
+  "pedido": { 
+  "type": "object", 
+  "properties": { 
+   "fecha": { "type": "string", "format": "date-time" },
+   "productos": { 
+    "type": "array", "minItems": 1, 
+	"items": { 
+	"type": "object",
+    "properties": {
+      "código": {"type": "string", "pattern": "[A-Z]\\d{2}" },
+      "nombre": {"type": "string"}, 
+      "cantidad": { "type": "integer", "minimum": 1 },
+	  "comentatios": { "type": "string" }
+     },
+    "required": ["codigo", "cantidad" ]
+   }}
+   },
+  "required": ["fecha", "productos"]
+}}
+}

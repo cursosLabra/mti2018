@@ -8,11 +8,17 @@ Negociación de contenido (curl)
 Persona de ejemplo: Mateo Labra Cervelle
 
 URI de wikipedia: 
-URI en bcn: http://datos.bcn.cl/recurso/persona/3229/
+URI en bcn: http://datos.bcn.cl/recurso/persona/3229
+URI en wikidata: http://www.wikidata.org/entity/Q6005967
+https://www.wikidata.org/wiki/Q6005967
 
+
+Validación con Json Schema: 
+ajv: https://ajv.js.org/
+ajv validate -s pedidoSchema.json -d pedido.json
 
  
-
+== 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -21,3 +27,17 @@ SELECT * WHERE {
   ?x foaf:isPrimaryTopicOf wiki:Mateo_Labra_Cervelle .
   ?x ?p ?y .
 }
+
+===
+
+SELECT ?p ?pLabel ?pic ?fechaNacim WHERE {
+  ?p wdt:P106 wd:Q82955.
+  ?p wdt:P19 wd:Q298.
+  ?p wdt:P569 ?fechaNacim .
+  OPTIONAL {
+    ?p wdt:P18 ?pic .
+    }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],es". }
+}
+
+http://tinyurl.com/yacppweb

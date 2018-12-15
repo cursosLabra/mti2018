@@ -1,17 +1,17 @@
-{ "pedido": [
+{ "pedido": { 
+  "fecha": "2018-12-10",
+  "productos":[
     {
-      "type": "producto",
-      "codigo": "R23",
       "nombre": "Rotulador RX2",
       "cantidad": 20,
       "comentarios": "Comprobad que escriben"
-    },
+	},
     {
-      "type": "producto",
-      "codigo": "G56",
+      "código": "G56",
       "nombre": "Grapadora Lin",
       "cantidad": 2,
       "comentarios": "Envuelta para regalo"
     }
   ]
+ }
 }

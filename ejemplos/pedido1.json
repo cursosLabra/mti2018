@@ -1,0 +1,12 @@
+{ "pedido":  { 
+   "fecha": "2017-05-29T23:00:00z",
+   "productos": [ 
+    { "codigo" : "R23" ,
+      "nombre" : "Rotulador",
+      "cantidad" : 20
+    },
+    { "codigo" : "G56" , 
+      "nombre" : "Grapadora",
+      "cantidad" : 2
+     }
+  ]}}
